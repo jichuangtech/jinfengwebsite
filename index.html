@@ -28,6 +28,21 @@
       <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
+      <script type="text/javascript">
+          var url = "http://www.jichuangtech.site/clothshopserver/api/goodsCart/1";
+          fetch(url,{
+              method: 'GET',
+              headers: {
+                  'Accept': 'application/json',
+                  'Content-Type': 'application/json'
+              }
+          }).then((response) => response.text())
+                  .then(function (responseText) {
+              alert("请求陈工 responseText: " + responseText);
+          }, function (error) {
+              alert("请求失败 error: " + error);
+          });
+      </script>
   </head>
   <body>
    
