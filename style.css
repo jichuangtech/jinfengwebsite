@@ -17,6 +17,7 @@ img {
     max-width: 100%;
     height: auto;
 }
+ul,li{ list-style:none;}
 .fix { overflow: hidden }
 h1,
 h2,
@@ -27,10 +28,15 @@ h6 {
     font-weight: 700;
     margin: 0 0 15px;
 }
+article.a-post:target{
+    padding-top:44px;
+}
 body { font-family: 'Titillium Web', sans-serif; }
+.rightnav li a{ color:#0CC; display:block; width:35px; margin-top:10px; border-radius:5px; border:3px solid #666; font-weight:bold; text-align:center; text-decoration:none; }
+.rightnav li a:hover{ background:#CCC;}
+.rightnav li a.current{ background:#CCC;}
 
-
-
+#sidebar.sticky { float: none; position: fixed; top: 100px; z-index: 999; right: 0px;  }
 .header-area {
     background: none repeat scroll 0 0 #f4f4f4;
 }
@@ -579,7 +585,7 @@ width: 10px;
 .single-product-area .zigzag-bottom {background-color: #333333}
 
 .single-product-area {
-  padding: 80px 0 130px;
+  padding: 0 0;//影响了js计算？？？？
 }
 
 
