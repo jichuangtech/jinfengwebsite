@@ -32,11 +32,19 @@ article.a-post:target{
     padding-top:44px;
 }
 body { font-family: 'Titillium Web', sans-serif; }
-.rightnav li a{ color:#0CC; display:block; width:35px; margin-top:10px; border-radius:5px; border:3px solid #666; font-weight:bold; text-align:center; text-decoration:none; }
-.rightnav li a:hover{ background:#CCC;}
-.rightnav li a.current{ background:#CCC;}
 
-#sidebar.sticky { float: none; position: fixed; top: 100px; z-index: 999; right: 0px;  }
+.rightnav li a{ color:#FFF; display:block; width:6vh; margin-top:10px; border-radius:5px; border:3px solid #CCC; font-weight:bold; text-align:center; text-decoration:none; background:#1abc9c; font-size:2.5vh; }
+.rightnav li a:hover{ background:#000;}
+.rightnav li a.current{ background:#000;}
+.rightnav ul{ padding-left:0;}
+.rightnav li a.anchor{
+    display: block;
+    position: relative;
+    top: -92px;
+    visibility: hidden;
+}
+
+#sidebar.sticky { float: none; position: fixed; top: 100px; z-index: 999; left: 0px;  }
 .header-area {
     background: none repeat scroll 0 0 #f4f4f4;
 }
@@ -572,7 +580,7 @@ width: 10px;
   margin: 10px 0 0;
 }
 
-.product-big-title-area {background: url(img/crossword.png) repeat scroll 0 0 #1ABC9C}
+.product-big-title-area {background: url(img/crossword.png) repeat scroll 0 0 #1ABC9C;}
 
 .product-bit-title h2 {
   font-family: raleway;

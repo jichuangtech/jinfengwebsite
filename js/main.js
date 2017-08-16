@@ -1,3 +1,4 @@
+   
 jQuery(document).ready(function($){
     
     // jQuery sticky Menu
@@ -83,6 +84,32 @@ jQuery(document).ready(function($){
     $('body').scrollspy({ 
         target: '.navbar-collapse',
         offset: 95
-    })      
+    }) 
+	 
+	 var jsonStu=[{"goodsName":"红布","goodsPrice":"123","goodsPicture":"img/product-1.jpg"},{"goodsName":"蓝布","goodsPrice":"123","goodsPicture":"img/product-2.jpg"},{"goodsName":"黄布","goodsPrice":"123","goodsPicture":"img/product-3.jpg"},{"goodsName":"绿布","goodsPrice":"123","goodsPicture":"img/product-4.jpg"},{"goodsName":"红布","goodsPrice":"123","goodsPicture":"img/product-1.jpg"},{"goodsName":"蓝布","goodsPrice":"123","goodsPicture":"img/product-2.jpg"},{"goodsName":"黄布","goodsPrice":"123","goodsPicture":"img/product-3.jpg"},{"goodsName":"绿布","goodsPrice":"123","goodsPicture":"img/product-4.jpg"},{"goodsName":"红布","goodsPrice":"123","goodsPicture":"img/product-1.jpg"},{"goodsName":"蓝布","goodsPrice":"123","goodsPicture":"img/product-2.jpg"},{"goodsName":"黄布","goodsPrice":"123","goodsPicture":"img/product-3.jpg"},{"goodsName":"绿布","goodsPrice":"123","goodsPicture":"img/product-4.jpg"}]; 
+	 //注：使用$.getJSON(url,data,function(){})从服务端获取。这里先写死json.
+	 var usejson=function(){
+		 $.each(jsonStu,function(key,value){
+$("#ss0").append('<div class="col-md-3 col-sm-6"><div class="single-shop-product"><div class="product-upper">'+
+                        '<img src="'+value.goodsPicture+'" alt=""></div>'+
+                        '<h2><a href="">'+value.goodsPrice+'</a></h2>'+
+                        '<div class="product-carousel-price">'+
+                            '<ins>'+value.goodsName+'</ins> <del>$999.00</del>'+
+                        '</div>'+  
+                        
+                        '<div class="product-option-shop">'+
+ '<a class="add_to_cart_button" data-quantity="1" data-product_sku="" data-product_id="70" rel="nofollow" href="/canvas/shop/?add-to-cart=70">Add to cart</a>'
+                        +'</div>'+                       
+                    '</div>'+
+                '</div>')
+			 })
+		 
+	 };
+	 usejson();
+	
+	 $("#red").on("click",function(){
+		 
+		 });
+	 //$("#ss0").empty();
 });
 
