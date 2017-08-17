@@ -35,11 +35,10 @@
               headers: {
                   'Accept': 'application/json',
                   'Content-Type': 'application/json',
-                  'mode': 'no-cors',
               }
           }).then((response) => response.text())
                   .then(function (responseText) {
-              alert("请求陈工 responseText: " + responseText);
+              alert("请求成功 responseText: " + responseText);
           }, function (error) {
               alert("请求失败 error: " + error);
           });
