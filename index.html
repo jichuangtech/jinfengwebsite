@@ -29,7 +29,17 @@
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
       <script type="text/javascript">
-          var url = "http://www.jichuangtech.site/clothshopserver/api/goodsCart/1";
+            /**
+             * （1）请求 商品分类的接口
+             */
+//          var url = "http://www.jichuangtech.site/clothshopserver/api/goodsCategories";
+
+            /**
+             * （2）请求 某个商品分类下所有商品的接口,其中 {goodsCategoryId} 要替换成（1）接口中返回的 商品分类对象的 id 属性的属性址
+             * 例如: http://www.jichuangtech.site/clothshopserver//api/goodsCategories/1/goods
+             */
+//          var url = "http://www.jichuangtech.site/clothshopserver//api/goodsCategories/3/goods";
+          var url = "http://www.jichuangtech.site/clothshopserver//api/goodsCategories/{goodsCategoryId}/goods;
           fetch(url,{
               method: 'GET',
               headers: {
