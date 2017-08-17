@@ -43,6 +43,8 @@ body { font-family: 'Titillium Web', sans-serif; }
     top: -92px;
     visibility: hidden;
 }
+.rightnav li button{ color:#FFF; display:block; width:6vh; margin-top:10px; border-radius:5px; border:3px solid #CCC; font-weight:bold; text-align:center; text-decoration:none; background:#1abc9c; font-size:2.5vh; padding:0; }
+.rightnav li button:hover{ background:#000;}
 
 #sidebar.sticky { float: none; position: fixed; top: 100px; z-index: 999; left: 0px;  }
 .header-area {

@@ -135,11 +135,11 @@
             <div style="position:absolute; left:0;top:0;">
             <div class="rightnav" id="sidebar">
                <ul>
-                   <li><a class="current" href=""><span id="red">红布</span></a></li>
-                   <li><a href=""><span>黄布</span></a></li>
-                   <li><a href=""><span>蓝布</span></a></li>
-                   <li><a href=""><span>绿布</span></a></li>
-                   <li><a href=""><span>黑布</span></a></li>
+                   <li><button type="button" id="red">红布</button></li>
+                   <li><button type="button" id="yellow">黄布</button></li>
+                   <li><button type="button" id="blue">蓝布</button></li>
+                   <li><button type="button" id="green">绿布</button></li>
+                   <li><button type="button" id="black">黑布</button></li>
                </ul>
             </div>
             </div>
@@ -270,13 +270,14 @@
     <script src="js/main.js"></script>
     <script src="js/stickySidebar.js"></script>
     <script>
-	   
+	
 		$(document).ready(function() {
 	
 			$('#sidebar').stickySidebar({
 				sidebarTopMargin: 180,
 				footerThreshold: 500
 			});
+			
 		
 		});
 		</script>
