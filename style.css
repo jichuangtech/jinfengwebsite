@@ -33,7 +33,7 @@ article.a-post:target{
 }
 body { font-family: 'Titillium Web', sans-serif; }
 
-.rightnav li a{ color:#FFF; display:block; width:6vh; margin-top:10px; border-radius:5px; border:3px solid #CCC; font-weight:bold; text-align:center; text-decoration:none; background:#1abc9c; font-size:2.5vh; }
+
 .rightnav li a:hover{ background:#000;}
 .rightnav li a.current{ background:#000;}
 .rightnav ul{ padding-left:0;}
@@ -43,7 +43,8 @@ body { font-family: 'Titillium Web', sans-serif; }
     top: -92px;
     visibility: hidden;
 }
-.rightnav li button{ color:#FFF; display:block; width:6vh; margin-top:10px; border-radius:5px; border:3px solid #CCC; font-weight:bold; text-align:center; text-decoration:none; background:#1abc9c; font-size:2.5vh; padding:0; }
+.rightnav li button{ color:#FFF; display:block; width:9vh;height:6vh; border:none; border-bottom:1px solid #FFF;  text-align:center; text-decoration:none;font-family: "Roboto Condensed",sans-serif;text-transform: uppercase; background:#1abc9c;  padding:0;font-size: 16px;
+    font-weight: 700; }
 .rightnav li button:hover{ background:#000;}
 
 #sidebar.sticky { float: none; position: fixed; top: 100px; z-index: 999; left: 0px;  }
@@ -94,7 +95,8 @@ body { font-family: 'Titillium Web', sans-serif; }
 font-family: "Roboto Condensed",sans-serif;
 text-transform: uppercase;
 width: 100%;
-z-index: 999;}
+}
+
 
 
 
@@ -155,15 +157,26 @@ z-index: 999;}
 }
 .shopping-item:hover .product-count {
     background: none repeat scroll 0 0 #000;
+	
 }
 
 
-.mainmenu-area ul.navbar-nav li a {
+
+.mainmenu-area ul.navbar-nav li button {
     color: #fff;
     font-size: 16px;
     font-weight: 700;
     padding: 20px;
+	background:none;
+	border:none;
+	width:18vw;
+	
 }
+.mainmenu-area ul.navbar-nav li button:hover{
+	
+	color:#fff;
+	background:#000;;
+	 }
 .copyrights{
 	text-indent:-9999px;
 	height:0;
@@ -171,8 +184,8 @@ z-index: 999;}
 	font-size:0;
 	overflow:hidden;
 }
-.mainmenu-area ul.navbar-nav li:hover a, .mainmenu-area ul.navbar-nav li.active a {background: #222}
-.mainmenu-area .nav > li > a:focus {color: #000}
+.mainmenu-area ul.navbar-nav li:hover a, .mainmenu-area ul.navbar-nav li.active{background: #222}
+.mainmenu-area .nav > li > button:focus {color: #fff}
 
 .slider-area {clear: both}
 .slider-area, .promo-area, .brands-area, .maincontent-area, .footer-top-area, .product-widget-area, .product-breadcroumb-area, .single-product-area {position: relative;overflow: hidden}

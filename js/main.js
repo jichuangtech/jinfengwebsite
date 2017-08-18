@@ -1,9 +1,9 @@
    
 jQuery(document).ready(function($){
-    
+     
     // jQuery sticky Menu
     
-	$(".mainmenu-area").sticky({topSpacing:0});
+	
     
     
     $('.product-carousel').owlCarousel({
@@ -44,6 +44,7 @@ jQuery(document).ready(function($){
             }
         }
     });  
+
     
     $('.brand-list').owlCarousel({
         loop:true,
@@ -79,16 +80,20 @@ jQuery(document).ready(function($){
 
         event.preventDefault();
     });    
-    
-    // Bootstrap ScrollPSY
-    $('body').scrollspy({ 
+    	
+    // Bootstrap ScrollPSY       //这段加进去导致后面的js（动态添加的商品）全部失效。
+    /*$('body').scrollspy({ 
         target: '.navbar-collapse',
         offset: 95
-    }); 
+    });*/ 
+	
 	
 });
+    
  
 	$(document).ready(function($){ 
+	           
+    
 	                var jsonStu=[{"goodsName":"红布","goodsPrice":"123","goodsPicture":"img/product-1.jpg"},{"goodsName":"蓝布","goodsPrice":"123","goodsPicture":"img/product-1.jpg"},{"goodsName":"黄布","goodsPrice":"123","goodsPicture":"img/product-1.jpg"},{"goodsName":"绿布","goodsPrice":"123","goodsPicture":"img/product-1.jpg"},{"goodsName":"红布","goodsPrice":"123","goodsPicture":"img/product-1.jpg"},{"goodsName":"蓝布","goodsPrice":"123","goodsPicture":"img/product-1.jpg"},{"goodsName":"黄布","goodsPrice":"123","goodsPicture":"img/product-1.jpg"},{"goodsName":"绿布","goodsPrice":"123","goodsPicture":"img/product-1.jpg"},{"goodsName":"红布","goodsPrice":"123","goodsPicture":"img/product-1.jpg"},{"goodsName":"蓝布","goodsPrice":"123","goodsPicture":"img/product-1.jpg"},{"goodsName":"黄布","goodsPrice":"123","goodsPicture":"img/product-1.jpg"},{"goodsName":"绿布","goodsPrice":"123","goodsPicture":"img/product-1.jpg"}]; 
 					var jsonStuRed=[{"goodsName":"红布","goodsPrice":"123","goodsPicture":"img/product-2.jpg"},{"goodsName":"红布","goodsPrice":"123","goodsPicture":"img/product-2.jpg"},{"goodsName":"红布","goodsPrice":"123","goodsPicture":"img/product-2.jpg"},{"goodsName":"红布","goodsPrice":"123","goodsPicture":"img/product-2.jpg"},{"goodsName":"红布","goodsPrice":"123","goodsPicture":"img/product-2.jpg"},{"goodsName":"红布","goodsPrice":"123","goodsPicture":"img/product-2.jpg"},{"goodsName":"红布","goodsPrice":"123","goodsPicture":"img/product-2.jpg"},{"goodsName":"红布","goodsPrice":"123","goodsPicture":"img/product-2.jpg"},{"goodsName":"红布","goodsPrice":"123","goodsPicture":"img/product-2.jpg"},{"goodsName":"红布","goodsPrice":"123","goodsPicture":"img/product-2.jpg"},{"goodsName":"红布","goodsPrice":"123","goodsPicture":"img/product-2.jpg"},{"goodsName":"红布","goodsPrice":"123","goodsPicture":"img/product-2.jpg"}];
 					var jsonStuYellow=[{"goodsName":"黄布","goodsPrice":"123","goodsPicture":"img/product-3.jpg"},{"goodsName":"黄布","goodsPrice":"123","goodsPicture":"img/product-3.jpg"},{"goodsName":"黄布","goodsPrice":"123","goodsPicture":"img/product-3.jpg"},{"goodsName":"黄布","goodsPrice":"123","goodsPicture":"img/product-3.jpg"},{"goodsName":"黄布","goodsPrice":"123","goodsPicture":"img/product-3.jpg"},{"goodsName":"黄布","goodsPrice":"123","goodsPicture":"img/product-3.jpg"},{"goodsName":"黄布","goodsPrice":"123","goodsPicture":"img/product-3.jpg"},{"goodsName":"黄布","goodsPrice":"123","goodsPicture":"img/product-3.jpg"},{"goodsName":"黄布","goodsPrice":"123","goodsPicture":"img/product-3.jpg"},{"goodsName":"黄布","goodsPrice":"123","goodsPicture":"img/product-3.jpg"},{"goodsName":"黄布","goodsPrice":"123","goodsPicture":"img/product-3.jpg"},{"goodsName":"黄布","goodsPrice":"123","goodsPicture":"img/product-3.jpg"}];
@@ -111,6 +116,7 @@ jQuery(document).ready(function($){
 			
 			 });};
 	 ujson(jsonStu);
+	
 			
 		 
 
@@ -128,5 +134,8 @@ jQuery(document).ready(function($){
 		ujson(jsonStuYellow);
 	
 });
+
 	 //$("#ss0").empty();
+	 
+	
 	});
