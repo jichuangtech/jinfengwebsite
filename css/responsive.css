@@ -1,6 +1,5 @@
 @media only screen and (min-width: 1280px)  {
-	.mainmenu-area ul.navbar-nav li button { width:20vw;}
-     .mainmenu-area ul{ margin-left:7vw;} 
+
 	}
 @media only screen and (min-width: 992px) and (max-width: 1280px) { 
 div.cart-collaterals ul.products li.product {
@@ -18,9 +17,7 @@ input[type="submit"], button[type="submit"] {
 .col-1, .col-2 {
   width: 293px;
 }   
-.mainmenu-area ul.navbar-nav li button { width:20vw;}
-.mainmenu-area ul{ margin-left:14vw;} 
-    
+
     
 }
 

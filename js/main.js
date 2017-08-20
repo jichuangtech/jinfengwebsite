@@ -134,6 +134,20 @@ jQuery(document).ready(function($){
 		ujson(jsonStuYellow);
 	
 });
+    $(document).ready(function($){
+         $("#hidenav").click(function(){
+            $(".rightnav").find("button").animate({width:'0'});
+            $("#shownav").animate({width:'100%'});
+
+         });
+          $("#shownav").click(function(){
+             $(this).animate({width:'0'});
+             $("#hidenav").animate({width:'9vh'});
+            $(this).parent().nextAll().find("button").animate({width:'9vh'});
+         });
+
+
+    });
 
 	 //$("#ss0").empty();
 	 

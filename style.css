@@ -46,6 +46,7 @@ body { font-family: 'Titillium Web', sans-serif; }
 .rightnav li button{ color:#FFF; display:block; width:9vh;height:6vh; border:none; border-bottom:1px solid #FFF;  text-align:center; text-decoration:none;font-family: "Roboto Condensed",sans-serif;text-transform: uppercase; background:#1abc9c;  padding:0;font-size: 16px;
     font-weight: 700; }
 .rightnav li button:hover{ background:#000;}
+.rightnav li:last-child button{border-bottom: none;}
 
 #sidebar.sticky { float: none; position: fixed; top: 100px; z-index: 999; left: 0px;  }
 .header-area {
@@ -160,7 +161,7 @@ width: 100%;
 	
 }
 
-
+.mainmenu-area ul.navbar-nav li{padding: 0;}
 
 .mainmenu-area ul.navbar-nav li button {
     color: #fff;
