@@ -43,10 +43,11 @@ body { font-family: 'Titillium Web', sans-serif; }
     top: -92px;
     visibility: hidden;
 }
-.rightnav li button{ color:#FFF; display:block; width:9vh;height:6vh; border:none; border-bottom:1px solid #FFF;  text-align:center; text-decoration:none;font-family: "Roboto Condensed",sans-serif;text-transform: uppercase; background:#1abc9c;  padding:0;font-size: 16px;
+.rightnav li button{ color:#FFF; display:block; width:9vh;height:6vh; border:none;  text-align:center; text-decoration:none;font-family: "Roboto Condensed",sans-serif;text-transform: uppercase; background:#1abc9c;  padding:0;font-size: 16px;
     font-weight: 700; }
-.rightnav li button:hover{ background:#000;}
+.rightnav li button:hover{ background:#000 !important;}
 .rightnav li:last-child button{border-bottom: none;}
+.rightnav li .active{background:#000;}
 
 #sidebar.sticky { float: none; position: fixed; top: 100px; z-index: 999; left: 0px;  }
 .header-area {
@@ -463,10 +464,10 @@ z-index: 9;
   padding-top: 30px;
 }
 .product-widget-area .zigzag-bottom{background: #333}
-.footer-top-area .zigzag-bottom{background: #000}
+.footer-top-area .zigzag-bottom{background: #000;}
 .footer-top-area {background: none repeat scroll 0 0 #333;
 color: #999;
-padding: 35px 0 180px;}
+padding: 35px 0 180px;z-index: 1;}
 
 
 .footer-bottom-area {background: #000;color: #fff}

@@ -89,6 +89,19 @@ jQuery(document).ready(function($){
 	
 	
 });
+/*var urlFenlei_pic="http://www.jichuangtech.site/clothshopserver//api/goodsCategories/picture/"+res[key].image+"";
+                            $("#ss0").append('<div class="col-md-3 col-sm-6"><div class="single-shop-product"><div class="product-upper">'+
+                        '<img src="'+urlFenlei_pic+'" alt=""></div>'+
+                        '<h2><a href="">'+res[key].id+'</a></h2>'+
+                        '<div class="product-carousel-price">'+
+                            '<ins>'+res[key].name+'</ins> <del>$999.00</del>'+
+                        '</div>'+  
+                        
+                        '<div class="product-option-shop">'+
+ '<a class="add_to_cart_button" data-quantity="1" data-product_sku="" data-product_id="70" rel="nofollow" href="/canvas/shop/?add-to-cart=70">Add to cart</a>'
+                        +'</div>'+                       
+                    '</div>'+
+                '</div>');*/
     
  
 	$(document).ready(function($){ 
@@ -99,6 +112,82 @@ jQuery(document).ready(function($){
 					var jsonStuYellow=[{"goodsName":"黄布","goodsPrice":"123","goodsPicture":"img/product-3.jpg"},{"goodsName":"黄布","goodsPrice":"123","goodsPicture":"img/product-3.jpg"},{"goodsName":"黄布","goodsPrice":"123","goodsPicture":"img/product-3.jpg"},{"goodsName":"黄布","goodsPrice":"123","goodsPicture":"img/product-3.jpg"},{"goodsName":"黄布","goodsPrice":"123","goodsPicture":"img/product-3.jpg"},{"goodsName":"黄布","goodsPrice":"123","goodsPicture":"img/product-3.jpg"},{"goodsName":"黄布","goodsPrice":"123","goodsPicture":"img/product-3.jpg"},{"goodsName":"黄布","goodsPrice":"123","goodsPicture":"img/product-3.jpg"},{"goodsName":"黄布","goodsPrice":"123","goodsPicture":"img/product-3.jpg"},{"goodsName":"黄布","goodsPrice":"123","goodsPicture":"img/product-3.jpg"},{"goodsName":"黄布","goodsPrice":"123","goodsPicture":"img/product-3.jpg"},{"goodsName":"黄布","goodsPrice":"123","goodsPicture":"img/product-3.jpg"}];
 					
 	 //注：使用$.getJSON(url,data,function(){})从服务端获取。这里先写死json.
+                   var urlFenlei="http://www.jichuangtech.site/clothshopserver//api/goodsCategories";
+                   var dataFenlei={};
+                   $.getJSON(urlFenlei,dataFenlei,function(res){
+
+                     $.each(res,function(key,value){
+                        $("#nav_ul").append('<li ><button  type="button" id="kind'+res[key].id+'">'+res[key].name+'</button></li>');
+
+
+                        $("#kind"+res[key].id).click(function(){
+                            $(this).parents("ul").find("button").css("background-color","#1abc9c");
+                            $(this).css("background-color","#000");
+                            $("#ss0").empty();
+
+                            
+                        var url_3submit="http://www.jichuangtech.site/clothshopserver/api/goods/pagination";
+                        var data_3submit={catId:res[key].id,pageSize:2,pageIndex:1};
+
+                        $.getJSON(url_3submit,data_3submit,function(respage){
+
+
+                            $.each(respage.data,function(k1,v1){
+
+                                var urlFenlei_pic="http://www.jichuangtech.site/clothshopserver//api/goodsCategories/picture/"+respage.data[k1].originalImg+"";
+                               $("#ss0").append('<div class="col-md-3 col-sm-6"><div class="single-shop-product"><div class="product-upper">'+
+                        '<img src="'+urlFenlei_pic+'" alt=""></div>'+
+                        '<h2><a href="">'+respage.data[k1].goodsSn+'</a></h2>'+
+                        '<div class="product-carousel-price">'+
+                            '<ins>'+respage.data[k1].goodsName+'</ins> <del>$999.00</del>'+
+                        '</div>'+  
+                        
+                        '<div class="product-option-shop">'+
+ '<a class="add_to_cart_button" data-quantity="1" data-product_sku="" data-product_id="70" rel="nofollow" href="/canvas/shop/?add-to-cart=70">Add to cart</a>'
+                        +'</div>'+                       
+                    '</div>'+
+                '</div>'); 
+                            })
+                        })
+
+                        for(var pdid=1;pdid<6;pdid++){
+                            $("#page"+pdid).unbind('click');
+                            $("#page"+pdid).click(function(){
+                                $("#ss0").empty();
+                                
+                                var data_3submit={catId:res[key].id,pageSize:2,pageIndex:$(this).text()};
+                                $.getJSON(url_3submit,data_3submit,function(pagei){
+                                    $.each(pagei.data,function(k2,v2){
+
+                                var urlFenlei_pic="http://www.jichuangtech.site/clothshopserver//api/goodsCategories/picture/"+pagei.data[k2].originalImg+"";
+                               $("#ss0").append('<div class="col-md-3 col-sm-6"><div class="single-shop-product"><div class="product-upper">'+
+                        '<img src="'+urlFenlei_pic+'" alt=""></div>'+
+                        '<h2><a href="">'+pagei.data[k2].goodsSn+'</a></h2>'+
+                        '<div class="product-carousel-price">'+
+                            '<ins>'+pagei.data[k2].goodsName+'</ins> <del>$999.00</del>'+
+                        '</div>'+  
+                        
+                        '<div class="product-option-shop">'+
+ '<a class="add_to_cart_button" data-quantity="1" data-product_sku="" data-product_id="70" rel="nofollow" href="/canvas/shop/?add-to-cart=70">Add to cart</a>'
+                        +'</div>'+                       
+                    '</div>'+
+                '</div>'); 
+                            });
+
+
+                                })
+
+                            });
+                        }
+                        
+
+                        });
+
+                        
+
+                    });
+                   });
+                   
 	   
 		var ujson=function(jsonStu){ $.each(jsonStu,function(key,value){
                        $("#ss0").append('<div class="col-md-3 col-sm-6"><div class="single-shop-product"><div class="product-upper">'+
@@ -124,7 +213,7 @@ jQuery(document).ready(function($){
 	  var ssd=function(){$("#ss0").empty()};
 	  
 	
-	$("#red").click(function(){
+	$("#page10").click(function(){
         $("#ss0").empty();
 		ujson(jsonStuRed);
 	
@@ -134,6 +223,8 @@ jQuery(document).ready(function($){
 		ujson(jsonStuYellow);
 	
 });
+    });
+
     $(document).ready(function($){
          $("#hidenav").click(function(){
             $(".rightnav").find("button").animate({width:'0'});
@@ -148,8 +239,10 @@ jQuery(document).ready(function($){
 
 
     });
-
+$(document).ajaxError(function(){
+            alert("某接口无效!");
+});
 	 //$("#ss0").empty();
 	 
 	
-	});
+	
