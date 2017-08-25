@@ -148,6 +148,11 @@ jQuery(document).ready(function($){
                     '</div>'+
                 '</div>'); 
                             })
+                            $("a[id^='page']").parent().remove();
+                           for(var i=1;i<=respage.pageTotal;i++){
+                           
+                            $("#ppage").before('<li><a id="page'+i+'" href="#">'+i+'</a></li>');
+                            }
                         })
 
                         for(var pdid=1;pdid<6;pdid++){
