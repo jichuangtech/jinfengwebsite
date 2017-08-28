@@ -8,7 +8,7 @@ $(document).ready(function($){
 
                      $.each(res,function(key,value){
                         $("#nav_ul").append('<li ><button  type="button" id="kind'+res[key].id+'">'+res[key].name+'</button></li>');
-                        $("#kind1").trigger("click");
+                        $("#kind16").trigger("click");
 
 
                         $("#kind"+res[key].id).click(function(){
@@ -96,21 +96,25 @@ $(document).ready(function($){
 
     $(document).ready(function($){
          $("#hidenav").click(function(){
+          var cfHid=[
+          function(){
+            $("#shownav").parent().nextAll().find("button").animate({width:"0"});
+            $("#hidenav").animate({width:"0"},aniCB);},
+          function(){
+             $("#shownav").parent().nextAll().find("button").hide();
+            $("#hidenav").hide(aniCB);},
+          function(){$("#shownav").show(0,aniCB);},
+          function(){$("#shownav").animate({width:"3vh"},aniCB);}
+          
+          ]
+           var aniCB=function() {
+          $(document).dequeue("myAnimation");
+           }
+            $(document).queue("myAnimation",cfHid);
+            aniCB();
 
 
 
-            $(this).animate({width:"0"},function(){
-              $(this).hide();
-            });
-            $("#shownav").parent().nextAll().animate({width:"0"},function(){
-              $("#shownav").parent().nextAll().hide(function(){
-                $("#shownav").show(function(){
-                  $("#shownav").animate({width:"100%"});
-
-                });
-              
-               });
-             })
            });
             
             
@@ -118,22 +122,26 @@ $(document).ready(function($){
 
         
           $("#shownav").click(function(){
-             $(this).animate({width:"0"},function(){
-              $(this).hide(function(){
-                $("#hidenav").show(function(){
-                  $("#hidenav").animate({width:"100%"});
-                });
-                $("#shownav").parent().nextAll().show(function(){
-                  $("#shownav").parent().nextAll().animate({width:"100%"});
-                });
+            var cfShow=[
+            function(){$("#shownav").animate({width:"0"},aniCF);},
+            function(){$("#shownav").hide(aniCF);},
+            function(){
+            $("#shownav").parent().nextAll().find("button").show(0);
+            $("#hidenav").show(0,aniCF);
+          },
+            function(){
+              $("#shownav").parent().nextAll().find("button").animate({width:"9vh"});
+              $("#hidenav").animate({width:"9vh"},aniCF);}
 
-              });
-             });
+            ]
+           var aniCF=function(){
+            $(document).dequeue("cfAnimation");
+           };
+           $(document).queue("cfAnimation",cfShow);
+           aniCF();
+
 
              
-             
-            
-            
          });
 
 });
