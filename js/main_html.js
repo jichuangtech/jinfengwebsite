@@ -14,6 +14,11 @@ $(document).ready(function() {
 	      $('#main_html').load('index.html');
 		  navi.find("li").removeClass('active');
 		  $(this).parents("li").addClass('active');
+		});
+	  $("#gocontact").click(function(){
+	      $('#main_html').load('contact.html');
+		  navi.find("li").removeClass('active');
+		  $(this).parents("li").addClass('active');
 		 
 	  });
 	  
