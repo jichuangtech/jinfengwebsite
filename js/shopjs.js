@@ -8,7 +8,7 @@ $(document).ready(function($){
 
                      $.each(res,function(key,value){
                         $("#nav_ul").append('<li ><button  type="button" id="kind'+res[key].id+'">'+res[key].name+'</button></li>');
-                        $("#kind16").trigger("click");
+                        $("#kind1").trigger("click");
 
 
                         $("#kind"+res[key].id).click(function(){
@@ -39,7 +39,7 @@ $(document).ready(function($){
                     '</div>'+
                 '</div>'); 
                             })
-                           
+
                             $("a[id^='page']").parent().remove();
                            for(var i=1;i<=respage.pageTotal;i++){
                            
