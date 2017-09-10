@@ -1,4 +1,5 @@
 @media only screen and (min-width: 1280px)  {
+  
 
 	}
 @media only screen and (min-width: 992px) and (max-width: 1280px) { 
@@ -15,7 +16,8 @@ input[type="submit"], button[type="submit"] {
 } 
 .col-1, .col-2 {
   width: 293px;
-}   
+} 
+
 
     
 }
@@ -25,10 +27,10 @@ input[type="submit"], button[type="submit"] {
 .user-menu, .header-right ul.list-inline {
   text-align: center;
 }
-
 .single-promo {margin-bottom: 30px}    
 .single-product-widget, .footer-about-us, .footer-menu {
   margin-bottom: 60px;
+
 }
     
     

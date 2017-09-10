@@ -8,8 +8,8 @@ $(document).ready(function($){
 
                      $.each(res,function(key,value){
                         $("#nav_ul").append('<li ><button  type="button" id="kind'+res[key].id+'">'+res[key].name+'</button></li>');
-                        $("#kind1").trigger("click");
-
+                       
+                         
 
                         $("#kind"+res[key].id).click(function(){
                             $(this).parents("ul").find("button").css("background-color","#1abc9c");
@@ -77,13 +77,14 @@ $(document).ready(function($){
                             });//click2
                         }    //for
                         
-
+                          
                         });//click1
 
                         
 
                     });//each
                    });//getjson
+
                    
 	   
 		
@@ -144,6 +145,16 @@ $(document).ready(function($){
 
              
          });
+
+
+          var ssheight=$("#ss0").height();
+          alert(ssheight);
+          if(ssheight==0){
+            $("#ss0").css({"height":"600px"});
+          }//动态ss0高度
+           $("#kind1").trigger("click");
+
+
 
 });
 	 //$("#ss0").empty();
