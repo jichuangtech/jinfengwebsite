@@ -83,6 +83,7 @@ $(document).ready(function($){
                         
 
                     });//each
+ $("#kind1").trigger("click");
                    });//getjson
 
                    
@@ -92,7 +93,7 @@ $(document).ready(function($){
 			
 		 
 
-	 
+	  
 	 
     });//jquery
 
@@ -146,13 +147,15 @@ $(document).ready(function($){
              
          });
 
+          
 
+         
           var ssheight=$("#ss0").height();
-          alert(ssheight);
+          
           if(ssheight==0){
             $("#ss0").css({"height":"600px"});
-          }//动态ss0高度
-           $("#kind1").trigger("click");
+          };//动态ss0高度
+
 
 
 
