@@ -12,8 +12,8 @@ $(document).ready(function($){
                          
 
                         $("#kind"+res[key].id).click(function(){
-                            $(this).parents("ul").find("button").css("background-color","#1abc9c");
-                            $(this).css("background-color","#000");
+                            $(this).parents("ul").find("button").css("background","transparent");
+                            $(this).css("background","#000");
                             $("#ss0").empty();
 
                             
@@ -26,6 +26,7 @@ $(document).ready(function($){
                             $.each(respage.data,function(k1,v1){
 
                                 var urlFenlei_pic="https://www.jichuangtech.site/clothshopserver//api/goodsCategories/picture/"+respage.data[k1].originalImg+"";
+                                if(!respage.data[k1].originalImg)urlFenlei_pic="img/noproduct.png";
                                $("#ss0").append('<div class="col-md-3 col-sm-6"><div class="single-shop-product"><div class="product-upper">'+
                         '<img src="'+urlFenlei_pic+'" alt=""></div>'+
                         '<h2><a href="">'+respage.data[k1].goodsSn+'</a></h2>'+

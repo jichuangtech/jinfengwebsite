@@ -32,17 +32,18 @@ article.a-post:target{
     padding-top:44px;
 }
 body { font-family: 'Titillium Web', sans-serif; }
-
-
+#left-top span{font-size:2vh;font-weight: normal;margin-left: 10px;}
+#left-bottom{border-top: 3px solid #515151;}
+.rightnav{margin-top: 1vh;}
 .rightnav li a:hover{ background:#000;}
 .rightnav li a.current{ background:#000;}
 .rightnav ul{ padding-left:0;}
 
-.rightnav li button{ color:#FFF; display:block; width:9vh;height:6vh; border:none;  text-align:center; text-decoration:none;font-family: "Roboto Condensed",sans-serif;text-transform: uppercase; background:#1abc9c;  padding:0;font-size: 16px;
+.rightnav li button{ color:#1abc9c; display:block; width:100%;height:6vh; border:none;  text-align:center; text-decoration:none;font-family: "Roboto Condensed",sans-serif;text-transform: uppercase;background:transparent;  padding:0;font-size: 16px;
     font-weight: 700; overflow: hidden;}
-.rightnav li button:hover{ background:#000 !important;}
+.rightnav li button:hover{ background:#000 !important;color:#fff!important;padding-left: 25px;}
 .rightnav li:last-child button{border-bottom: none;}
-.rightnav li .active{background:#000;}
+.rightnav li .active{background:#000!important;}
 
 #sidebar.sticky { float: none; position: fixed; top: 100px; z-index: 999; left: 0px;  }
 .header-area {
@@ -609,8 +610,24 @@ width: 10px;
 }
 
 
+#ss0 .product-upper img{width: 100%;}
+.secondmenu a {
+    font-size: 12px;
+    color: #4A515B;
+    text-align: center;
+}
 
+.secondmenu li.active {
+    background-color: #eee;
+    border-color: #428bca;
+}
+.nav-header.collapsed > span.glyphicon-chevron-toggle:before {
+    content: "\e114";
+}
 
+.nav-header > span.glyphicon-chevron-toggle:before {
+    content: "\e113";
+}
 
 .sidebar-title {
     color: #3dc6ab;
