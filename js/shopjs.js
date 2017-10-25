@@ -36,9 +36,7 @@ $(document).ready(function($){
                             '<ins>'+respage.data[k1].goodsName+'</ins> <del>$999.00</del>'+
                         '</div>'+  
                         
-                        '<div class="product-option-shop">'+
- '<a class="add_to_cart_button" data-quantity="1" data-product_sku="" data-product_id="70" rel="nofollow" href="/canvas/shop/?add-to-cart=70">Add to cart</a>'
-                        +'</div>'+                       
+                                              
                     '</div>'+
                 '</div>'); 
                             })
@@ -49,7 +47,7 @@ $(document).ready(function($){
                             $("#ppage").before('<li><a id="page'+i+'" href="#">'+i+'</a></li>');
                             }
                         })
-
+                          setTimeout(function () {    
                         for(var pdid=1;pdid<6;pdid++){
                             $("#page"+pdid).unbind('click');
                             $("#page"+pdid).click(function(){
@@ -60,16 +58,13 @@ $(document).ready(function($){
                                     $.each(pagei.data,function(k2,v2){
 
                                 var urlFenlei_pic="https://www.jichuangtech.site/clothshopserver//api/goodsCategories/picture/"+pagei.data[k2].originalImg+"";
+                                if(!pagei.data[k2].originalImg)urlFenlei_pic="img/noproduct.png";
                                $("#ss0").append('<div class="col-md-3 col-sm-6"><div class="single-shop-product"><div class="product-upper">'+
                         '<img src="'+urlFenlei_pic+'" alt=""></div>'+
                         '<h2><a href="">'+pagei.data[k2].goodsSn+'</a></h2>'+
                         '<div class="product-carousel-price">'+
                             '<ins>'+pagei.data[k2].goodsName+'</ins> <del>$999.00</del>'+
-                        '</div>'+  
-                        
-                        '<div class="product-option-shop">'+
- '<a class="add_to_cart_button" data-quantity="1" data-product_sku="" data-product_id="70" rel="nofollow" href="/canvas/shop/?add-to-cart=70">Add to cart</a>'
-                        +'</div>'+                       
+                        '</div>'+                         
                     '</div>'+
                 '</div>'); 
                             });//each
@@ -78,7 +73,7 @@ $(document).ready(function($){
                                 })//getjson
 
                             });//click2
-                        }    //for
+                        } }, 500);    //for
                         
                           
                         });//click1
