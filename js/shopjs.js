@@ -13,7 +13,9 @@ $(document).ready(function($){
 
                         $("#kind"+res[key].id).click(function(){
                             $(this).parents("ul").find("button").css("background","transparent");
+                            $(this).parents("ul").find("button").css("color","#1abc9c");
                             $(this).css("background","#000");
+                            $(this).css("color","#fff");
                             $("#ss0").empty();
 
                             
